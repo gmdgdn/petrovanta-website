@@ -1,0 +1,319 @@
+{
+  "metadata": {
+    "homepage": {
+      "title": "Petrovanta: Global Petroleum, Petrochemical & Chemical Trading Partner",
+      "description": "Petrovanta is your trusted international trading partner for petroleum products, petrochemicals, chemicals, polymers, and fertilizers. Quality, reliability, and global reach from Dubai, UAE, and Frankfurt, Germany."
+    },
+    "about": {
+      "title": "About Petrovanta | Leading International Petroleum & Commodity Trading",
+      "description": "Discover Petrovanta's mission, vision, and core values. Learn about our journey as a global leader in sourcing and trading petroleum, petrochemicals, chemicals, polymers, and fertilizers from Dubai and Frankfurt."
+    },
+    "products": {
+      "title": "All Products | Petroleum, Petrochemicals, Chemicals, Polymers, Fertilizers | Petrovanta",
+      "description": "Explore Petrovanta's comprehensive portfolio of strategic resources, including high-quality petroleum products, petrochemicals, industrial chemicals, versatile polymers, and essential fertilizers."
+    },
+    "contact": {
+      "title": "Contact Petrovanta | Global Petroleum & Chemical Trading Enquiries",
+      "description": "Get in touch with Petrovanta for inquiries about our petroleum products, petrochemicals, chemicals, polymers, and fertilizers. Contact our Dubai or Frankfurt offices."
+    },
+    "petroleum": {
+      "title": "Petroleum Products | Crude Oil, Jet A1, EN590 Diesel, Bitumen | Petrovanta",
+      "description": "Explore Petrovanta's range of high-quality petroleum products, including globally sourced Crude Oil, Jet A1 aviation fuel, EN590 10ppm Diesel, and Bitumen."
+    },
+    "crudeOil": {
+      "title": "Crude Oil Sourcing & Trading | Global Grades | Petrovanta",
+      "description": "Petrovanta: Your trusted partner for sourcing and trading diverse grades of crude oil. Reliable supply for global refining and industrial needs."
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "products": "Products",
+    "contact": "Contact"
+  },
+  "homepage": {
+    "hero": {
+      "headline": "Petrovanta: Powering Global Progress, Delivering Strategic Resources",
+      "subheadline": "We supply essential petroleum, petrochemical, chemical, polymer, and fertilizer products that fuel industries and meet human needs worldwide, backed by expert professionals and robust global networks.",
+      "cta": {
+        "products": "Explore Our Products",
+        "contact": "Partner With Us"
+      }
+    },
+    "about": {
+      "heading": "About Petrovanta: A Global Leader in Commodity Trading",
+      "description": {
+        "intro": "Petrovanta is a distinguished international petroleum and commodity trading company, headquartered in the strategic global hub of Dubai, UAE, with a significant European presence in Frankfurt, Germany. We specialize in the ethical sourcing, meticulous trading, and efficient delivery of a comprehensive spectrum of products including:",
+        "products": {
+          "petroleum": "Petroleum Products",
+          "petrochemicals": "Petrochemicals",
+          "chemicals": "Industrial Chemicals",
+          "polymers": "Polymers",
+          "fertilizers": "Fertilizers"
+        },
+        "mission": "Our mission is to be an undisputed market leader, consistently exceeding client expectations through an unwavering commitment to quality, integrity, and operational excellence. Leveraging extensive links to reputable refineries and global sources, our experienced trading and logistics teams ensure reliable, on-time delivery to any part of the globe, fulfilling the diverse and critical needs of our international clientele."
+      },
+      "highlights": {
+        "experience": {
+          "title": "Years of Industry Expertise",
+          "value": "15+"
+        },
+        "network": {
+          "title": "Countries Worldwide",
+          "value": "50+"
+        },
+        "portfolio": {
+          "title": "Product Categories",
+          "value": "5+"
+        },
+        "quality": {
+          "title": "ISO 9001 Standards",
+          "value": "Certified"
+        }
+      }
+    },
+    "products": {
+      "heading": "Our Comprehensive Product Portfolio",
+      "subheading": "Supplying the Essential Building Blocks for a Growing World",
+      "petroleum": {
+        "title": "Petroleum Products",
+        "description": "We deliver critical energy resources that power economies and global transportation. Our offerings include various grades of Crude Oil, refined fuels like Jet A1 and EN590 Diesel, and essential Bitumen for infrastructure development.",
+        "alt": "High-quality petroleum products from Petrovanta"
+      },
+      "petrochemicals": {
+        "title": "Petrochemical Products",
+        "description": "Our diverse range of petrochemicals includes vital Base Oils for advanced lubricants, versatile Paraffin Wax, essential AdBlue for emissions control, LABSA for detergent manufacturing, and foundational chemicals like Formaldehyde and Anhydrous Ammonia.",
+        "alt": "Diverse petrochemical solutions by Petrovanta"
+      },
+      "chemicals": {
+        "title": "Chemical Products",
+        "description": "We supply a wide array of industrial chemicals crucial for manufacturing and processing operations. Our portfolio includes Sulfuric Acid, Hydrochloric Acid, Calcium Chloride, and Phosphoric Acid, all meeting stringent international quality standards.",
+        "alt": "Industrial chemical supplies from Petrovanta"
+      },
+      "polymers": {
+        "title": "Polymer Products",
+        "description": "Offering a comprehensive selection of polymers essential for countless applications, from versatile Polypropylene (PP) and Polyvinyl Chloride (PVC) to various Polyethylenes such as MDPE, HDPE, and LLDPE.",
+        "alt": "Versatile polymer products portfolio by Petrovanta"
+      },
+      "fertilizers": {
+        "title": "Fertilizer Products",
+        "description": "Supporting global agriculture and food security with high-efficacy fertilizers. Our range includes Urea 46%, Ammonium Nitrate, Rock Phosphate, NPK blends, Ammonium Sulphate, and Diammonium Phosphate (DAP).",
+        "alt": "High-efficacy fertilizers for global agriculture by Petrovanta"
+      },
+      "viewProducts": "View Products"
+    },
+    "values": {
+      "heading": "Why Partner With Petrovanta? The Petrovanta Advantage",
+      "quality": {
+        "title": "Uncompromising Quality Assurance",
+        "description": "We are dedicated to sourcing and delivering only products that meet the highest international standards. Our rigorous quality control processes ensure excellence across our entire portfolio, from refinery to final delivery."
+      },
+      "global": {
+        "title": "Global Reach, Local Expertise",
+        "description": "Our extensive network, with strategic hubs in Dubai and Frankfurt, and experienced logistics teams ensure timely and efficient delivery of products worldwide, understanding and adapting to local market dynamics and needs."
+      },
+      "client": {
+        "title": "Client-Centric Approach",
+        "description": "We prioritize understanding and satisfying the unique requirements of each client. We build lasting, transparent partnerships founded on trust, mutual success, and responsive service."
+      },
+      "insight": {
+        "title": "Strategic Market Insight & Reliability",
+        "description": "We continuously analyze market trends and geopolitical factors to position ourselves and our clients ahead. We offer strategic sourcing solutions and reliable supply chains for evolving global demands."
+      }
+    },
+    "cta": {
+      "heading": "Ready to Secure Your Strategic Product Needs?",
+      "description": "Partner with Petrovanta for unparalleled quality, reliability, and global expertise in petroleum, petrochemical, chemical, polymer, and fertilizer trading. Contact our expert team today to discuss your specific requirements and discover how we can support your business growth and operational efficiency.",
+      "contact": "Get in Touch",
+      "quote": "Request a Quote"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About Petrovanta: Your Strategic Partner in Global Commodity Trading",
+      "description": "Discover the foundations of Petrovanta – our mission, vision, core values, and the unwavering commitment that drives us to be a leading force in the international commodity trading landscape."
+    },
+    "overview": {
+      "heading": "Our Journey: From Vision to Global Impact in Commodity Trading",
+      "paragraph1": "Petrovanta was incorporated in Dubai, UAE, a pivotal global trade and logistics hub, with a clear and ambitious vision: to become a distinguished leader in the international petroleum and commodity trading markets.",
+      "paragraph2": "From our inception, we have meticulously focused on building a company grounded in profound market expertise, unwavering integrity, and a deep, operational understanding of the complex global supply chain for critical resources.",
+      "paragraph3": "Our strategic headquarters in Dubai, complemented by our key European presence in Frankfurt, Germany, empowers us to serve a diverse international clientele with unparalleled efficiency, market responsiveness, and precision."
+    },
+    "vision": {
+      "heading": "Our Vision for the Future",
+      "description": "To be universally recognized as one of the foremost global providers of high-quality oil and gas products, petrochemicals, chemicals, polymers, and fertilizers. We aspire to lead not only in product delivery but also in providing relevant value-added services."
+    },
+    "mission": {
+      "heading": "Our Mission: Delivering Value and Building Partnerships",
+      "description": "Our mission is to consistently provide clients with competitively priced products that deliver exceptional quality, tangible value, and proven performance. We are dedicated to ensuring just-in-time deliveries of a diverse variety of essential commodities."
+    },
+    "values": {
+      "heading": "The Principles That Guide Petrovanta",
+      "respect": {
+        "title": "Respect & Collaboration",
+        "description": "We hold profound respect for all stakeholders – our valued clients, trusted partners, dedicated employees, and the communities in which we operate."
+      },
+      "integrity": {
+        "title": "Honesty & Integrity",
+        "description": "We communicate with truthfulness and operate with unwavering integrity in every aspect of our business. Building enduring trust through complete transparency is paramount."
+      },
+      "empathy": {
+        "title": "Empathy & Client Focus",
+        "description": "We genuinely care for our employees and clients, making it a priority to understand their unique perspectives, challenges, and needs."
+      },
+      "quality": {
+        "title": "Uncompromising Quality",
+        "description": "We are resolutely committed to sourcing, trading, and delivering only products we can be unequivocally proud of, adhering to the highest international standards."
+      },
+      "foresight": {
+        "title": "Strategic Foresight",
+        "description": "We diligently analyze global market trends, geopolitical shifts, and industry dynamics to position ourselves and our clients advantageously."
+      }
+    },
+    "presence": {
+      "heading": "Our Global Network: Connecting Markets, Delivering Solutions",
+      "description": "Headquartered in the dynamic global city of Dubai, UAE, and with a strategic European office in Frankfurt, Germany, Petrovanta's operational reach extends across continents.",
+      "dubai": {
+        "title": "Dubai Office (Global Headquarters)",
+        "subtitle": "Strategic hub for Middle East, Asia, and Africa operations",
+        "address": {
+          "title": "Address",
+          "line1": "Business Bay, Dubai",
+          "line2": "United Arab Emirates"
+        },
+        "phone": "+971 XXX XXXXXXX",
+        "email": "info@petrovanta.com",
+        "hours": "Sunday - Thursday, 9:00 AM - 5:00 PM (GST)"
+      },
+      "frankfurt": {
+        "title": "Frankfurt Office (European Hub)",
+        "subtitle": "Strategic center for European operations",
+        "address": {
+          "title": "Address",
+          "line1": "16-18 Große Gallusstraße",
+          "line2": "60312 Frankfurt am Main, Germany"
+        },
+        "phone": "+49 162 1749 341",
+        "email": "europe.sales@petrovanta.com",
+        "hours": "Monday - Friday, 9:00 AM - 5:00 PM (CET)"
+      }
+    }
+  },
+  "products": {
+    "hero": {
+      "title": "Petrovanta's Comprehensive Product Portfolio",
+      "description": "Petrovanta is committed to supplying a wide spectrum of high-quality strategic resources essential for global industries, agriculture, and infrastructure."
+    },
+    "categories": {
+      "heading": "Discover Our Range of Essential Commodities",
+      "petroleum": {
+        "title": "Petroleum Products: Fueling Global Energy and Infrastructure",
+        "description": "Petrovanta supplies a comprehensive suite of petroleum products, the cornerstone of global energy, transportation, and industrial activity.",
+        "products": "• Crude Oil (Various Grades)<br>• Jet A1 Aviation Fuel<br>• EN590 10ppm Diesel (ULSD)<br>• Bitumen (Paving & Industrial Grades)",
+        "alt": "Overview of Petrovanta's Petroleum Product Offerings"
+      },
+      "petrochemicals": {
+        "title": "Petrochemical Products: Essential Intermediates for Modern Industries",
+        "description": "Our diverse range of petrochemicals serves as vital building blocks and processing agents for countless industrial applications.",
+        "products": "• Base Oils (Group I, II, III)<br>• Paraffin Wax (Various Grades)<br>• AdBlue (Diesel Exhaust Fluid)<br>• LABSA<br>• Formaldehyde<br>• Anhydrous Ammonia",
+        "alt": "Petrovanta's Range of Petrochemical Solutions"
+      },
+      "chemicals": {
+        "title": "Chemical Products: Foundational Materials for Manufacturing & Processing",
+        "description": "Petrovanta supplies a wide array of fundamental and specialty industrial chemicals, crucial for various manufacturing processes.",
+        "products": "• Sulfuric Acid<br>• Hydrochloric Acid<br>• Calcium Chloride<br>• Phosphoric Acid",
+        "alt": "Industrial and Specialty Chemicals by Petrovanta"
+      },
+      "polymers": {
+        "title": "Polymer Products: Versatile Materials for Countless Applications",
+        "description": "We offer a comprehensive selection of high-quality polymers, essential for manufacturing an extensive range of products.",
+        "products": "• Polypropylene (PP)<br>• Polyvinyl Chloride (PVC)<br>• Medium-Density Polyethylene (MDPE)<br>• High-Density Polyethylene (HDPE)<br>• Linear Low-Density Polyethylene (LLDPE)",
+        "alt": "Versatile Polymer Portfolio from Petrovanta"
+      },
+      "fertilizers": {
+        "title": "Fertilizer Products: Supporting Global Agriculture and Food Security",
+        "description": "Petrovanta plays a vital role in supporting global food production by supplying high-efficacy fertilizers.",
+        "products": "• Urea (Prilled & Granular, 46% N)<br>• Ammonium Nitrate<br>• Rock Phosphate<br>• NPK Compound Fertilizers<br>• Ammonium Sulphate<br>• Diammonium Phosphate (DAP)",
+        "alt": "High-Efficacy Fertilizers for Global Agriculture by Petrovanta"
+      },
+      "keyProducts": "Key Products Include",
+      "explore": "Explore Products"
+    },
+    "ourRange": "Our Range of Products",
+    "viewDetails": "View Details",
+    "detail": {
+      "keyFeatures": "Key Features"
+    }
+  },
+  "contact": {
+    "form": {
+      "heading": "Send Us a Message",
+      "description": "We are here to assist you with your inquiries about our products and services.",
+      "fields": {
+        "fullName": "Full Name",
+        "company": "Company Name (Optional)",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "country": "Country/Region",
+        "productCategory": "Product Category of Interest",
+        "selectCategory": "Select Category",
+        "subject": "Subject",
+        "message": "Your Message/Inquiry",
+        "privacy": "I agree to Petrovanta's Privacy Policy and consent to my data being processed for the purpose of this inquiry."
+      },
+      "categories": {
+        "petroleum": "Petroleum Products",
+        "petrochemicals": "Petrochemicals",
+        "chemicals": "Chemical Products",
+        "polymers": "Polymer Products",
+        "fertilizers": "Fertilizer Products",
+        "other": "Other/General Inquiry"
+      },
+      "submit": "Send Message",
+      "success": {
+        "title": "Message Sent Successfully!",
+        "message": "Thank you for your message! A member of the Petrovanta team will be in touch with you shortly."
+      }
+    },
+    "offices": {
+      "heading": "Our Offices: Connecting Globally",
+      "description": "Reach out to our offices directly for immediate assistance with your inquiries.",
+      "dubai": {
+        "title": "Dubai Office (Global Headquarters)",
+        "subtitle": "Strategic hub for Middle East, Asia, and Africa operations",
+        "address": "Business Bay, Dubai, United Arab Emirates",
+        "phone": "+971 XXX XXXXXXX",
+        "email": "info@petrovanta.com",
+        "hours": "Sunday - Thursday, 9:00 AM - 5:00 PM (GST)"
+      },
+      "frankfurt": {
+        "title": "Frankfurt Office (European Hub)",
+        "subtitle": "Strategic center for European operations",
+        "address": "16-18 Große Gallusstraße, 60312 Frankfurt am Main, Germany",
+        "phone": "+49 162 1749 341",
+        "email": "europe.sales@petrovanta.com",
+        "hours": "Monday - Friday, 9:00 AM - 5:00 PM (CET)"
+      }
+    }
+  },
+  "footer": {
+    "description": "Your trusted international trading partner for petroleum products, petrochemicals, chemicals, polymers, and fertilizers.",
+    "quickLinks": "Quick Links",
+    "links": {
+      "about": "About Us",
+      "products": "Products",
+      "contact": "Contact"
+    },
+    "dubai": {
+      "title": "Dubai Office (HQ)",
+      "address": "Business Bay, Dubai, UAE",
+      "phone": "+971 XXX XXXXXXX"
+    },
+    "frankfurt": {
+      "title": "Frankfurt Office",
+      "address": "16-18 Große Gallusstraße, 60312 Frankfurt am Main, Germany",
+      "phone": "+49 162 1749 341"
+    },
+    "copyright": "All rights reserved."
+  }
+}
