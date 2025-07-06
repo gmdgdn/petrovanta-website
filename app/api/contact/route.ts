@@ -5,6 +5,15 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
 
+    // If Supabase is not configured, simulate success for development
+    if (!supabase) {
+      console.log("Contact form submission (development mode):", body)
+      return NextResponse.json({ 
+        message: "Contact form submitted successfully (development mode)", 
+        data: { id: Date.now() } 
+      }, { status: 200 })
+    }
+
     const { data, error } = await supabase
       .from("contact_submissions")
       .insert([

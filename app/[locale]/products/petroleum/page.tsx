@@ -5,6 +5,7 @@ import ProductCategoryHero from "@/components/products/ProductCategoryHero"
 import ProductGrid from "@/components/products/ProductGrid"
 import QualityAssurance from "@/components/products/QualityAssurance"
 import CategoryCTA from "@/components/products/CategoryCTA"
+import { getProductsByCategory } from "@/lib/products"
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations({ locale, namespace: "metadata" })
@@ -16,36 +17,11 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 }
 
 export default function PetroleumPage({ params: { locale } }: { params: { locale: string } }) {
-  const products = [
-    {
-      id: "crude-oil",
-      name: "Crude Oil",
-      description: "The foundational energy source for the global economy. Various grades available.",
-      image: "/placeholder.svg?height=300&width=400",
-      href: `/${locale}/products/petroleum/crude-oil`,
-    },
-    {
-      id: "jet-a1",
-      name: "Jet A1 Aviation Fuel",
-      description: "High-quality aviation turbine fuel meeting international specifications.",
-      image: "/placeholder.svg?height=300&width=400",
-      href: `/${locale}/products/petroleum/jet-a1`,
-    },
-    {
-      id: "en590-diesel",
-      name: "EN590 10ppm Diesel",
-      description: "Ultra-low sulfur diesel fuel compliant with European standards.",
-      image: "/placeholder.svg?height=300&width=400",
-      href: `/${locale}/products/petroleum/en590-diesel`,
-    },
-    {
-      id: "bitumen",
-      name: "Bitumen",
-      description: "Essential material for road construction and industrial applications.",
-      image: "/placeholder.svg?height=300&width=400",
-      href: `/${locale}/products/petroleum/bitumen`,
-    },
-  ]
+  // Get petroleum products from the data system
+  const products = getProductsByCategory('petroleum').map(product => ({
+    ...product,
+    href: `/${locale}/products/petroleum/${product.id}`
+  }))
 
   return (
     <div className="min-h-screen">

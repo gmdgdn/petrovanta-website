@@ -3,14 +3,8 @@
 import { useTranslations } from "next-intl"
 import Link from "next/link"
 import { ArrowRight, ArrowLeft } from "lucide-react"
-
-interface Product {
-  id: string
-  name: string
-  description: string
-  image: string
-  href: string
-}
+import ProductImage from "@/components/ui/ProductImage"
+import type { Product } from "@/lib/products"
 
 interface ProductGridProps {
   locale: string
@@ -33,11 +27,12 @@ export default function ProductGrid({ locale, products }: ProductGridProps) {
           {products.map((product) => (
             <div key={product.id} className="card group hover:scale-105 transition-transform">
               <div className="mb-6">
-                <img
-                  src={product.image || "/placeholder.svg"}
-                  alt={product.name}
-                  className="w-full h-48 object-cover rounded-lg"
-                />
+                <div className="w-full h-48 overflow-hidden rounded-lg">
+                  <ProductImage
+                    product={product}
+                    className="w-full h-full"
+                  />
+                </div>
               </div>
               <h3 className="text-xl font-semibold text-primary mb-3">{product.name}</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">{product.description}</p>

@@ -1,9 +1,11 @@
 import { createClient } from "@supabase/supabase-js"
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'http://localhost:54321'
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'demo-key'
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+// Only create client if environment variables are properly set
+export const supabase = supabaseUrl && supabaseUrl !== 'http://localhost:54321' ? 
+  createClient(supabaseUrl, supabaseAnonKey) : null
 
 // Database types
 export interface ContactSubmission {
