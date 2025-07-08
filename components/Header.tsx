@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -10,21 +11,28 @@ export default function Header() {
     <header className="bg-white shadow-sm border-b sticky top-0 z-50">
       <div className="container">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="text-2xl font-bold text-blue-600">
-            Petrovanta
+          <Link href="/" className="flex items-center">
+            <Image 
+              src="/PETROVANTA  Logo Color.png" 
+              alt="Petrovanta Logo" 
+              width={180} 
+              height={48}
+              className="h-10 w-auto"
+              priority
+            />
           </Link>
 
           <nav className="hidden md:flex space-x-8">
-            <Link href="#home" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link href="#home" className="text-gray-700 hover:text-[#343bed] transition-colors font-medium">
               Home
             </Link>
-            <Link href="#about" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link href="#about" className="text-gray-700 hover:text-[#343bed] transition-colors font-medium">
               About
             </Link>
-            <Link href="#products" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link href="#products" className="text-gray-700 hover:text-[#343bed] transition-colors font-medium">
               Products
             </Link>
-            <Link href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link href="#contact" className="text-gray-700 hover:text-[#343bed] transition-colors font-medium">
               Contact
             </Link>
           </nav>
@@ -41,16 +49,16 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t">
             <nav className="flex flex-col space-y-4">
-              <Link href="#home" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link href="#home" className="text-gray-700 hover:text-[#343bed] transition-colors font-medium">
                 Home
               </Link>
-              <Link href="#about" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link href="#about" className="text-gray-700 hover:text-[#343bed] transition-colors font-medium">
                 About
               </Link>
-              <Link href="#products" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link href="#products" className="text-gray-700 hover:text-[#343bed] transition-colors font-medium">
                 Products
               </Link>
-              <Link href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link href="#contact" className="text-gray-700 hover:text-[#343bed] transition-colors font-medium">
                 Contact
               </Link>
             </nav>

@@ -4,10 +4,11 @@ import { ProductDetail } from '@/components/products/ProductDetail'
 import type { Metadata } from 'next'
 
 interface Props {
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
   const product = getProductById('petroleum', 'jet-a1')
   
   if (!product) {
@@ -33,7 +34,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function JetA1Page({ params }: Props) {
+export default async function JetA1Page({ params }: Props) {
+  const { locale } = await params
   const product = getProductById('petroleum', 'jet-a1')
   
   if (!product) {

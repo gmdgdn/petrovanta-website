@@ -6,7 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "i18n:extract": "i18next-parser --config i18next-parser.config.js",
+    "i18n:validate": "node scripts/validate-translations.js",
+    "i18n:report": "node scripts/validate-translations.js --report",
+    "prebuild": "npm run i18n:validate"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
@@ -63,11 +70,16 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.5",
+    "jest": "^30.0.4",
+    "jest-environment-jsdom": "^30.0.4",
     "postcss": "^8",
     "tailwindcss": "^3.4.17",
     "typescript": "^5"

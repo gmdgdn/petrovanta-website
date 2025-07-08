@@ -6,7 +6,8 @@ import ProductGrid from "@/components/products/ProductGrid"
 import QualityAssurance from "@/components/products/QualityAssurance"
 import CategoryCTA from "@/components/products/CategoryCTA"
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
   const t = await getTranslations({ locale, namespace: "metadata" })
 
   return {
@@ -15,7 +16,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   }
 }
 
-export default function PetrochemicalsPage({ params: { locale } }: { params: { locale: string } }) {
+export default async function PetrochemicalsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
   const products = [
     {
       id: "base-oils",

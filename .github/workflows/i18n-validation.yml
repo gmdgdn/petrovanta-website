@@ -1,0 +1,183 @@
+name: i18n Validation
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'messages/**'
+      - 'app/**'
+      - 'components/**'
+      - 'src/**'
+      - 'scripts/validate-translations.js'
+      - 'i18next-parser.config.js'
+
+jobs:
+  validate-translations:
+    name: Validate Translation Completeness
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Validate translation files
+        run: npm run i18n:validate
+        
+      - name: Generate missing keys report
+        if: failure()
+        run: npm run i18n:report
+        continue-on-error: true
+        
+      - name: Upload missing keys report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: translation-missing-keys-report
+          path: translation-missing-keys.json
+          retention-days: 30
+          
+      - name: Comment PR with translation issues
+        if: failure() && github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = './translation-missing-keys.json';
+            
+            if (fs.existsSync(path)) {
+              const report = JSON.parse(fs.readFileSync(path, 'utf8'));
+              
+              let comment = '## 🌐 Translation Validation Failed\n\n';
+              comment += 'The following locales have missing or invalid translation keys:\n\n';
+              
+              for (const [locale, missingKeys] of Object.entries(report)) {
+                comment += `### ${locale.toUpperCase()} locale (${missingKeys.length} issues)\n`;
+                comment += '```\n';
+                missingKeys.slice(0, 10).forEach(item => {
+                  comment += `- ${item.key}\n`;
+                });
+                if (missingKeys.length > 10) {
+                  comment += `... and ${missingKeys.length - 10} more\n`;
+                }
+                comment += '```\n\n';
+              }
+              
+              comment += '💡 **To fix these issues:**\n';
+              comment += '1. Add missing translation keys to the respective locale files\n';
+              comment += '2. Replace any placeholder values with actual translations\n';
+              comment += '3. Run `npm run i18n:validate` locally to verify fixes\n\n';
+              comment += '📄 Download the full report from the workflow artifacts for complete details.';
+              
+              github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: comment
+              });
+            }
+
+  lint-translations:
+    name: Lint Translation Files
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Validate JSON syntax
+        run: |
+          echo "Validating translation file JSON syntax..."
+          for file in messages/*.json; do
+            if [ -f "$file" ]; then
+              echo "Checking $file..."
+              if ! python -m json.tool "$file" > /dev/null; then
+                echo "❌ Invalid JSON syntax in $file"
+                exit 1
+              else
+                echo "✅ Valid JSON syntax in $file"
+              fi
+            fi
+          done
+          
+      - name: Check for BOM and encoding issues
+        run: |
+          echo "Checking for encoding issues..."
+          for file in messages/*.json; do
+            if [ -f "$file" ]; then
+              # Check for BOM
+              if hexdump -C "$file" | head -1 | grep -q "ef bb bf"; then
+                echo "❌ BOM detected in $file - this may cause parsing issues"
+                exit 1
+              fi
+              
+              # Check if file is valid UTF-8
+              if ! iconv -f utf-8 -t utf-8 "$file" > /dev/null 2>&1; then
+                echo "❌ Invalid UTF-8 encoding in $file"
+                exit 1
+              fi
+            fi
+          done
+          echo "✅ All files have valid encoding"
+
+  rtl-verification:
+    name: Verify RTL Language Support
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Check RTL locale support
+        run: |
+          echo "Verifying RTL language support..."
+          
+          # Check if RTL locales are properly configured
+          RTL_LOCALES=("ar" "he")
+          
+          for locale in "${RTL_LOCALES[@]}"; do
+            if [ ! -f "messages/$locale.json" ]; then
+              echo "❌ Missing translation file for RTL locale: $locale"
+              exit 1
+            fi
+            
+            echo "✅ Found translation file for RTL locale: $locale"
+          done
+          
+          # Check if layout.tsx properly handles RTL
+          if ! grep -q "\\['ar', 'he'\\].includes(locale)" app/*/layout.tsx; then
+            echo "❌ Layout does not properly handle RTL languages"
+            exit 1
+          fi
+          
+          echo "✅ RTL support verification passed"
+          
+      - name: Check for RTL-specific CSS classes
+        run: |
+          echo "Checking for RTL CSS considerations..."
+          
+          # This is a basic check - in a real project you might want to check for:
+          # - dir="rtl" attributes
+          # - RTL-specific Tailwind classes
+          # - Proper text direction handling
+          
+          if grep -r "dir.*rtl" app/ components/ || grep -r "\\['ar', 'he'\\]" app/ components/; then
+            echo "✅ Found RTL direction handling in components"
+          else
+            echo "⚠️  No explicit RTL handling found in components"
+          fi

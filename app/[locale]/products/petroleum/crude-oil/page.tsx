@@ -9,7 +9,8 @@ import ProductQuality from "@/components/products/ProductQuality"
 import ProductCTA from "@/components/products/ProductCTA"
 import { getProductById } from "@/lib/products"
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
   const t = await getTranslations({ locale, namespace: "metadata" })
 
   return {
@@ -18,7 +19,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   }
 }
 
-export default function CrudeOilPage({ params: { locale } }: { params: { locale: string } }) {
+export default async function CrudeOilPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
   // Get product data from centralized system
   const product = getProductById("crude-oil")
   

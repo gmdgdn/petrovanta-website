@@ -8,7 +8,8 @@ import CoreValues from "@/components/about/CoreValues"
 import GlobalPresence from "@/components/about/GlobalPresence"
 import WhyChooseUs from "@/components/about/WhyChooseUs"
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
   const t = await getTranslations({ locale, namespace: "metadata" })
 
   return {
@@ -17,7 +18,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   }
 }
 
-export default function AboutPage({ params: { locale } }: { params: { locale: string } }) {
+export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
   return (
     <div className="min-h-screen">
       <Header locale={locale} />

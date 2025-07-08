@@ -4,10 +4,11 @@ import { ProductDetail } from '@/components/products/ProductDetail'
 import type { Metadata } from 'next'
 
 interface Props {
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
   const product = getProductById('chemicals', 'hydrochloric-acid')
   
   if (!product) {
@@ -33,7 +34,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function HydrochloricAcidPage({ params }: Props) {
+export default async function HydrochloricAcidPage({ params }: Props) {
+  const { locale } = await params
   const product = getProductById('chemicals', 'hydrochloric-acid')
   
   if (!product) {
