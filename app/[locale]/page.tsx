@@ -7,7 +7,8 @@ import CoreValues from "@/components/CoreValues"
 import CTASection from "@/components/CTASection"
 import Footer from "@/components/Footer"
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
   const t = await getTranslations({ locale, namespace: "metadata" })
 
   return {
@@ -16,10 +17,11 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   }
 }
 
-export default function HomePage({ params: { locale } }: { params: { locale: string } }) {
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
   return (
     <div className="min-h-screen">
-      <Header locale={locale} />
+      <Header />
       <main>
         <HeroSection locale={locale} />
         <AboutSnapshot locale={locale} />
@@ -27,7 +29,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
         <CoreValues locale={locale} />
         <CTASection locale={locale} />
       </main>
-      <Footer locale={locale} />
+      <Footer />
     </div>
   )
 }

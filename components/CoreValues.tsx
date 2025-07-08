@@ -1,3 +1,5 @@
+"use client"
+
 import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { Shield, Globe, Users, TrendingUp } from "lucide-react"
