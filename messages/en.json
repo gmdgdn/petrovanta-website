@@ -23,6 +23,10 @@
     "crudeOil": {
       "title": "Crude Oil Sourcing & Trading | Global Grades | Petrovanta",
       "description": "Petrovanta: Your trusted partner for sourcing and trading diverse grades of crude oil. Reliable supply for global refining and industrial needs."
+    },
+    "petrochemicals": {
+      "title": "Petrochemicals – Petrovanta",
+      "description": "Explore Petrovanta's full range of petrochemical products, specifications, and supply options."
     }
   },
   "navigation": {
@@ -243,6 +247,36 @@
     "viewDetails": "View Details",
     "detail": {
       "keyFeatures": "Key Features"
+    },
+    "quality": {
+      "heading": "Quality Assurance & Support",
+      "description": "Petrovanta's commitment to excellence ensures every product meets the highest standards of quality and reliability.",
+      "features": {
+        "standards": {
+          "title": "International Standards",
+          "description": "All products meet or exceed international quality standards and specifications."
+        },
+        "suppliers": {
+          "title": "Certified Suppliers",
+          "description": "Sourced from ISO-certified refineries and manufacturing facilities worldwide."
+        },
+        "logistics": {
+          "title": "Global Logistics",
+          "description": "Reliable supply chain management ensuring timely delivery anywhere in the world."
+        },
+        "support": {
+          "title": "Expert Support",
+          "description": "Technical support and consultation from our experienced team of specialists."
+        }
+      }
+    },
+    "cta": {
+      "heading": "Ready to Source High-Quality Products?",
+      "description": "Contact our expert team to discuss your specific requirements and discover how Petrovanta can support your business needs.",
+      "buttons": {
+        "quote": "Get Quote",
+        "contact": "Contact Sales"
+      }
     }
   },
   "contact": {
