@@ -4,10 +4,11 @@ import { ProductDetail } from '@/components/products/ProductDetail'
 import type { Metadata } from 'next'
 
 interface Props {
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
   const product = getProductById('fertilizers', 'dap')
   
   if (!product) {
@@ -33,7 +34,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function DAPPage({ params }: Props) {
+export default async function DAPPage({ params }: Props) {
+  const { locale } = await params
   const product = getProductById('fertilizers', 'dap')
   
   if (!product) {

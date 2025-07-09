@@ -7,7 +7,8 @@ import QualityAssurance from "@/components/products/QualityAssurance"
 import CategoryCTA from "@/components/products/CategoryCTA"
 import { getProductsByCategory } from "@/lib/products"
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
   const t = await getTranslations({ locale, namespace: "metadata" })
 
   return {
@@ -16,7 +17,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   }
 }
 
-export default function PetroleumPage({ params: { locale } }: { params: { locale: string } }) {
+export default async function PetroleumPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
   // Get petroleum products from the data system
   const products = getProductsByCategory('petroleum').map(product => ({
     ...product,

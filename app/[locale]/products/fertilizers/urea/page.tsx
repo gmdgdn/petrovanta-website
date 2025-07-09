@@ -6,7 +6,8 @@ import ProductApplications from "@/components/products/ProductApplications"
 import ProductQuality from "@/components/products/ProductQuality"
 import ProductCTA from "@/components/products/ProductCTA"
 
-export default function UreaPage({ params: { locale } }: { params: { locale: string } }) {
+export default async function UreaPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
   const productData = {
     name: "Urea 46%",
     description:

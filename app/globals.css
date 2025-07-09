@@ -12,15 +12,60 @@
 }
 
 :root {
+  /* Shadcn/ui variables */
   --background: 0 0% 100%;
   --foreground: 222.2 84% 4.9%;
   --border: 214.3 31.8% 91.4%;
-  --primary: 222.2 47.4% 11.2%;
+  --primary: 52 50% 50%;
   --primary-foreground: 210 40% 98%;
-  --secondary: 210 40% 96%;
+  --secondary: 45 100% 50%;
   --secondary-foreground: 222.2 47.4% 11.2%;
   --muted: 210 40% 96%;
   --muted-foreground: 215.4 16.3% 46.9%;
+  
+  /* Design System Colors - Exact specification */
+  --color-primary-500: #343BED;
+  --color-primary-600: #071D49;
+  --color-accent-500: #FF8453;
+  --color-neutral-100: #F5F6F8;
+  --color-neutral-600: #444952;
+
+  /* Typography - Design System */
+  --font-latin: 'Inter', 'Poppins', sans-serif;
+  --font-arabic: 'Cairo', 'Tajawal', 'Noto Sans Arabic', sans-serif;
+
+  /* Spacing - 4px base unit */
+  --space-1: 0.25rem; /* 4px */
+  --space-2: 0.5rem;  /* 8px */
+  --space-3: 1rem;    /* 16px */
+  --space-4: 1.5rem;  /* 24px */
+  --space-5: 2rem;    /* 32px */
+  --space-6: 2.5rem;  /* 40px */
+  --space-7: 3rem;    /* 48px */
+
+  /* Radius */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+
+  /* Shadow - Light mode */
+  --elevation-1: 0 1px 2px rgba(0,0,0,.12);
+  --elevation-2: 0 4px 8px rgba(0,0,0,.14);
+  --elevation-3: 0 8px 16px rgba(0,0,0,.16);
+
+  /* Motion */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --easing-standard: cubic-bezier(0.4,0,0.2,1);
+}
+
+/* Dark mode variables */
+.dark {
+  /* Shadow - Dark mode */
+  --elevation-1: 0 1px 2px rgba(0,0,0,.32);
+  --elevation-2: 0 4px 8px rgba(0,0,0,.36);
+  --elevation-3: 0 8px 16px rgba(0,0,0,.38);
 }
 
 html {
@@ -37,4 +82,72 @@ html {
 
 .rtl {
   direction: rtl;
+}
+
+/* Design System Utility Classes */
+@layer utilities {
+  /* Typography utilities */
+  .text-h1 { @apply text-h1-mobile lg:text-h1-desktop font-bold; }
+  .text-h2 { @apply text-h2-mobile lg:text-h2-desktop font-bold; }
+  .text-h3 { @apply text-h3-mobile lg:text-h3-desktop font-semibold; }
+  .text-h4 { @apply text-h4-mobile lg:text-h4-desktop font-semibold; }
+  .text-body-lg { @apply text-body-lg-mobile lg:text-body-lg-desktop; }
+  .text-body { @apply text-body-mobile lg:text-body-desktop; }
+  .text-caption { @apply text-caption-mobile lg:text-caption-desktop; }
+  
+  /* Color utilities - Design System colors */
+  .bg-primary { background-color: var(--color-primary-500); }
+  .bg-primary-dark { background-color: var(--color-primary-600); }
+  .bg-accent { background-color: var(--color-accent-500); }
+  .bg-neutral-light { background-color: var(--color-neutral-100); }
+  .bg-neutral { background-color: var(--color-neutral-600); }
+  
+  .text-primary { color: var(--color-primary-500); }
+  .text-primary-dark { color: var(--color-primary-600); }
+  .text-accent { color: var(--color-accent-500); }
+  .text-neutral { color: var(--color-neutral-600); }
+  
+  /* Button utilities - WCAG AA compliant */
+  .btn-primary {
+    background-color: var(--color-primary-500);
+    color: white;
+    transition: all var(--duration-fast) var(--easing-standard);
+  }
+  .btn-primary:hover {
+    background-color: var(--color-primary-600);
+  }
+  
+  .btn-accent {
+    background-color: var(--color-accent-500);
+    color: white;
+    transition: all var(--duration-fast) var(--easing-standard);
+  }
+  .btn-accent:hover {
+    opacity: 0.9;
+  }
+  
+  /* Spacing utilities */
+  .space-1 { @apply space-y-1; }
+  .space-2 { @apply space-y-2; }
+  .space-3 { @apply space-y-3; }
+  .space-4 { @apply space-y-4; }
+  .space-5 { @apply space-y-5; }
+  .space-6 { @apply space-y-6; }
+  .space-7 { @apply space-y-7; }
+  
+  /* Elevation utilities */
+  .elevation-1 { box-shadow: var(--elevation-1); }
+  .elevation-2 { box-shadow: var(--elevation-2); }
+  .elevation-3 { box-shadow: var(--elevation-3); }
+  
+  /* Radius utilities */
+  .radius-sm { border-radius: var(--radius-sm); }
+  .radius-md { border-radius: var(--radius-md); }
+  .radius-lg { border-radius: var(--radius-lg); }
+  
+  /* Motion utilities */
+  .motion-fast { transition-duration: var(--duration-fast); }
+  .motion-normal { transition-duration: var(--duration-normal); }
+  .motion-slow { transition-duration: var(--duration-slow); }
+  .motion-standard { transition-timing-function: var(--easing-standard); }
 }

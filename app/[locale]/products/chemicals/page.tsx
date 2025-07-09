@@ -5,7 +5,8 @@ import ProductGrid from "@/components/products/ProductGrid"
 import QualityAssurance from "@/components/products/QualityAssurance"
 import CategoryCTA from "@/components/products/CategoryCTA"
 
-export default function ChemicalsPage({ params: { locale } }: { params: { locale: string } }) {
+export default async function ChemicalsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
   const products = [
     {
       id: "sulfuric-acid",
